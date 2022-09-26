@@ -1247,11 +1247,13 @@ footer .footer-body-wrapper .wrapper .header {
 html {
   scroll-behavior: smooth;
 }
-
+a {
+  text-decoration: none;
+}
 body {
   width: 100%;
   background-color: rgb(230, 246, 230);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter Tight', sans-serif;
 }
 
 ::-moz-placeholder {
