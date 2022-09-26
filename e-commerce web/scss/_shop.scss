@@ -1,0 +1,177 @@
+.shop-wrapper {
+    width: 100%;
+    background-color: white;
+    
+
+    .shop {
+        .shop-one {
+            width: 100%;
+            position: relative;
+            margin-bottom: 40px;
+            .shop-one-img {
+                
+                
+                .img-shop {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 100%;
+                    border-radius: 8px;
+                }
+            }
+            @include devices (mobile) {
+                .shop-one-img {
+                    width: 100%;
+                    height: 200px;
+                    margin-block-end: 0px;
+                    .img-shop {
+                        filter: hue-rotate(150deg);
+                    }
+                }
+            }
+            @include devices (desktop) {
+                .shop-one-img {
+                    width: 60%;
+                    height: 300px;
+                }
+            }
+            @include devices (tablet) {
+                .shop-one-img {
+                    width: 60%;
+                    height: 300px;
+                }
+            }
+            .shop-one-text {
+                
+                p {
+                    font-size: calc(0.35rem + 1vw);
+                    margin-block-end: 12px;
+                    &.header {
+                        font-weight: bold;
+                        font-size: calc(0.75rem + 1vw);
+                        margin-block-end: 12px;
+                    }
+                }
+                button {
+                    padding: 4px 8px;
+                    border: 1px solid $secondary-color;
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    &:hover {
+                        background-color: $secondary-color;
+                        color: white;
+                    }
+
+                }
+                @include devices (mobile) {
+                    button {
+                    background-color: $secondary-color;
+                    color: white;
+                    font-size: 10px;
+                    border-radius: 5px;
+                    }
+                }
+            }
+            @include devices (desktop) {
+                .shop-one-text {
+                    width: 50%;
+                    position: absolute;
+                    right: 10%;
+                    top: 20%;
+                    background-color: $primary-color;
+                    padding: 20px;
+                    border-radius: 8px;
+                }
+            }
+            @include devices (tablet) {
+                .shop-one-text {
+                    width: 50%;
+                    position: absolute;
+                    right: 10%;
+                    top: 25%;
+                    background-color: $primary-color;
+                    padding: 20px;
+                    border-radius: 8px;
+                }
+            }
+            @include devices (mobile) {
+                .shop-one-text {
+                    width: 100%;
+                    position: absolute;
+                    text-align: center;
+                    top: 25%;
+                    padding: 10px;
+                    border-radius: 8px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .shop-two {
+        width: 100%;
+        position: relative;
+        margin-bottom: 40px;
+        .shop-two-img {
+            width: 60%;
+            height: 300px;
+            margin-inline-start: 40%;
+            
+            
+            .img-shop {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+                border-radius: 8px;
+            }
+        }
+        .shop-two-text {
+            width: 50%;
+            position: absolute;
+            left: 10%;
+            top: 25%;
+            background-color: $primary-color;
+            padding: 20px;
+            border-radius: 8px;
+            p {
+                font-size: calc(0.35rem + 1vw);
+                margin-block-end: 12px;
+                &.header {
+                    font-weight: bold;
+                    font-size: calc(0.75rem + 1vw);
+                    margin-block-end: 12px;
+                }
+            }
+            button {
+                padding: 4px 8px;
+                border: 1px solid $secondary-color;
+                background-color: $primary-color;
+                color: $secondary-color;
+                &:hover {
+                    background-color: $secondary-color;
+                    color: white;
+                }
+
+            }
+        }
+    }
+    @include devices (mobile) {
+        .shop-two {
+            display: none;
+        }
+    }
+}
+@include devices (mobile) {
+    .shop-wrapper {
+        padding: 20px 10px;
+    }
+}
+@include devices (desktop) {
+    .shop-wrapper {
+        padding: 40px 50px;
+    }
+}
+@include devices (tablet) {
+    .shop-wrapper {
+        padding: 20px 25px;
+    }
+}

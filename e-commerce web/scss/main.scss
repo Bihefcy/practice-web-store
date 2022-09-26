@@ -1,0 +1,41 @@
+@import 'config';
+@import 'nav';
+@import 'landing_page';
+@import 'divider';
+@import 'products';
+@import 'review';
+@import 'shop';
+@import 'special';
+@import 'footer';
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    background-color: $primary-color;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+::placeholder {
+    color: rgba(34, 9, 9, 0.5);
+    padding-inline-start: 8px;
+}
+
+@include devices(mobile) {
+    .show {
+    display: none;
+}
+}
+@include devices(desktop) {
+    .show {
+    display: block;
+}
+}
+@include devices(tablet) {
+    .show {
+    display: block;
+}
+}
+

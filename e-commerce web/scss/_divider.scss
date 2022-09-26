@@ -1,0 +1,159 @@
+.divider {
+    width: 100%;
+    background-color: white;
+    margin-top: 50px;
+    color: $tertiary-color;
+
+    .divider-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 15px;
+        max-width: 1100px;
+        margin: auto;
+        gap: 8px;
+    
+        .divider-info-text-wrapper {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            .text-wrapper {
+                margin-bottom: 20px;
+                .header {
+                font-size: 20px;
+                font-weight: bold;
+                }
+                @include devices(tablet) {
+                    p {
+                        font-size: 8px;
+                        &.header {
+                            font-size: 14px;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        @include devices(tablet) {
+            .divider-info-text-wrapper {
+                padding-top: 5px;
+            }
+            .divider-image-wrapper {
+                width: 200px;
+                .divider-image {
+                    width: 100%;
+                }
+            }
+        }
+        @include devices (desktop) {
+            .divider-image-wrapper {
+                aspect-ratio: 3/1;
+                height: 120px;
+                .divider-image {
+                    width: 100%;
+                }
+            }
+        }
+        .divider-image-wrapper {
+            position: relative;
+            .divider-image {
+                object-fit: cover;
+                border-radius: 10px;
+                
+            }
+            .divider-image-text {
+                position: absolute;
+                top: 45%;
+                left: 10%;
+                right: 10%;
+                text-align: center;
+                .divider-text {
+                    color: white;
+                    .bold {
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                    @include devices (tablet) {
+                        .bold {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .divider-button {
+                    text-align: center;
+                    button {
+                        padding: 6px 12px;
+                        border-radius: 6px;
+                        background-color: $secondary-color;
+                        color: white;
+                        border: none;
+                        &:hover {
+                            background-color: $primary-color;
+                            color: $secondary-color;
+                        }
+                    }
+                }
+                @include devices (desktop) {
+                    .divider-button {
+                        margin-top: 14px;
+                    }
+                }
+            }
+            @include devices (tablet) {
+                .divider-button {
+                    margin-top: 4px;
+                }
+                .divider-image-text {
+                    top: 25%;
+                    .divider-text {
+                        p {
+                            font-size: 8px;
+                            &.bold {
+                                font-size: 12px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    @include devices (mobile) {
+        .divider-info {
+            flex-direction: column;
+            align-items: flex-start;
+            .divider-info-text-wrapper {
+                width: 70%;
+                .text-wrapper {
+                    margin-bottom: 40px;
+                }
+            }
+            .divider-image-wrapper {
+                width: 100%;
+                .divider-image {
+                    width: 100%;
+                }
+                .divider-image-text {
+                    top: 35%;
+                    .divider-text {
+                        .bold {
+                            font-size: 16px;
+                        }
+                        p {
+                            font-size: 10px;
+                        }
+                    }
+                }
+                .divider-button {
+                    margin-top: 14px;
+                }
+            }
+        }
+        
+    }
+}
+

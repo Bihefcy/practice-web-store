@@ -1,0 +1,120 @@
+footer {
+    width: 100%;
+    ul {
+        list-style-type: none;
+    }
+    .footer-wrapper {
+        .logo {
+            margin-bottom: 10px;
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                span {
+                    color: $secondary-color;
+                }
+            }
+            
+        }
+
+    }
+    @include devices (desktop) {
+        .footer-wrapper {
+            padding: 40px 40px;
+        }
+    }
+    @include devices (tablet) {
+        .footer-wrapper {
+            padding: 40px 20px;
+        }
+    }
+    @include devices (mobile) {
+        .footer-wrapper {
+            padding: 20px 10px;
+        }
+    }
+    .footer-body-wrapper {
+        
+        
+        .wrapper {
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                @include devices (desktop) {
+                    p {
+                        font-weight: bold;
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+                @include devices (tablet) {
+                    p {
+                        font-weight: bold;
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+                @include devices (mobile) {
+                    p {
+                        font-weight: normal;
+                    }
+                }
+
+            }
+            @include devices (desktop) {
+                .body {
+                    ul {
+                        li {
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
+            @include devices (tablet) {
+                .body {
+                    ul {
+                        li {
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
+            @include devices (mobile) {
+                .body {
+                    ul {
+                        li {
+                            margin: 5px 0;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    @include devices (desktop) {
+        .footer-body-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+    }
+    @include devices (tablet) {
+        .footer-body-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    @include devices (mobile) {
+        .footer-body-wrapper {
+            display: flex;
+           flex-direction: column;
+        }
+    }
+
+}

@@ -1,0 +1,43 @@
+$primary-color: rgb(230, 246, 230);
+$secondary-color: rgb(42, 165, 42);
+$tertiary-color: rgb(30, 30, 30);
+
+@mixin devices ($breakpoint) {
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 769px){
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 768px)  and (min-width: 426px){
+            @content;
+        }
+    }
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 425px) {
+            @content;
+        }
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.product-wrapper-div {
+    ::-webkit-scrollbar {
+        width: 1px;
+        
+    }
+    ::-webkit-scrollbar-thumb {
+        width: 1px;
+        
+    }
+    ::-webkit-scrollbar-track {
+        background-color: white;
+    }
+}
+

@@ -1,0 +1,283 @@
+.reviews-wrapper {
+    width: 100%;
+    background-color: white;
+    
+    
+    .reviews-desktop {
+        background-color: $primary-color;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 10px;
+        height: 200px;
+        
+
+        @include devices (tablet) {
+            .reviews-text {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        @include devices (desktop) {
+            .reviews-text {
+                width: 30%;
+            }
+        }
+        .reviews-text {
+            .reviews-text-copy {
+                p {
+                    font-size: 12px;
+                    font-weight: lighter;
+                    padding-bottom: 20px;
+                    &.h {
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+            .reviews-text-nav {
+                button {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 80px;
+                    background-color: $primary-color;
+                    border: 1px solid $secondary-color;
+
+                    &:hover {
+                        background-color: $secondary-color;
+                        color: white;
+                    }
+                    &.green {
+                        background-color: $secondary-color;
+                        border: none;
+                        &:hover {
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include devices (tablet) {
+            .review-wrapper {
+                width: 100%;
+            }
+        }
+        @include devices (desktop) {
+            .review-wrapper {
+                width: 70%;
+            }
+        }
+        .review-wrapper {
+            position: relative;
+            @include devices (tablet) {
+                .reviews-review-wrapper {
+                    gap: 10px;
+                }
+            }
+            @include devices (desktop) {
+                .reviews-review-wrapper {
+                    gap: 30px;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+            
+            .reviews-review-wrapper{
+                display: flex;
+                .review {
+                    .review-name {
+                        display: flex;
+                        gap: 8px;
+                        margin-bottom: 32px;
+                        .review-name-line {
+                            margin-top: 6px;
+                            width: 48px;
+                            height: 1px;
+                            background-color: rgb(57, 57, 57);
+                        }
+                        .review-name-actual {
+                            color: rgb(89, 89, 89);
+                        }
+                    }
+                    @include devices(tablet) {
+                        .review-name {
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                    .review-card {
+                        background-color: white;
+                        font-size: 14px;
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 80px;
+                        padding: 10px;
+                        position: relative;
+                        box-shadow: 0px 1px 5px -1px $tertiary-color;
+                        .review-card-picture {
+                            width: 35px;
+                            height: 35px;
+                            background-color: $tertiary-color;
+                            position: absolute;
+                            top: -15px;
+                            left: 10px;
+                            border-radius: 5px;
+                        }
+                        .review-card-text {
+                            .review-card-text-header {
+                                text-align: right;
+                                margin-bottom: 8px;
+                                p{
+                                    font-weight: bold;
+                                }
+                            }
+                            .review-card-text-text {
+                                background-color: 
+                                $primary-color;
+                                font-size: calc(0rem + 1vw);
+                            }
+                        }
+                    }
+                }
+            }
+            
+
+        }
+    }
+    @include devices (desktop) {
+        .reviews-desktop {
+        padding-top: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 200px;
+        }
+    }
+    @include devices (tablet) {
+        .reviews-desktop {
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            height: 350px;
+        }
+    }
+    @include devices (mobile) {
+        .reviews-desktop {
+            display: none;
+        }
+    }
+
+
+    .reviews-mobile {
+        width: 100%;
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 5px;
+        .reviews-text {
+            margin-bottom: 10px;
+            p {
+                color: rgb(89, 89, 89);
+                font-size: 12px;
+                &.h {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    color: $tertiary-color;
+                }
+            }
+        }
+        .review-wrapper {
+            .reviews-review-wrapper {
+                .review {
+                    .review-name-text-nav {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .review-name-and-nav {
+                            display: flex;
+                            gap: 8px;
+                            .review-name-line {
+                                height: 1px;
+                                width: 40px;
+                                background-color: rgb(89, 89, 89);
+                                margin-top: 3px;
+                            }
+                            .review-name-actual {
+                                p {
+                                    color: rgb(89, 89, 89);
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                        .reviews-text-nav {
+                            button {
+                                height: 30px;
+                                width: 30px;
+                                border-radius: 40px;
+                                background-color: $primary-color;
+                                border: 1px solid $secondary-color;
+                                &:hover {
+                                    background-color: $secondary-color;
+                                    color: white;
+                                }
+                                &.green {
+                                    background-color: $secondary-color;
+                                    border: none;
+                                    &:hover {
+                                        background-color: $primary-color;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .review-card-wrapper {
+                        .review-card {
+                            display: flex;
+                            gap: 8px;
+                            justify-content: space-between;
+                            align-items: center;
+                            .review-card-picture {
+                                height: 50px;
+                                width: 20%;
+                                background-color: rgb(89, 89, 89);
+                            }
+                            .review-card-text-text {
+                                font-size: calc(0.5rem + 1.5vw);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+@include devices (desktop) {
+    .reviews-wrapper {
+        padding: 50px 60px;
+        .reviews-mobile {
+            display: none;
+        }
+    }
+    
+}
+@include devices (tablet) {
+    .reviews-wrapper {
+        padding: 10px 20px;
+        .reviews-mobile {
+            display: none;
+        }
+    }
+    
+}
+@include devices (mobile) {
+    .reviews-wrapper {
+        padding: 5px 10px;
+    }
+    
+}
